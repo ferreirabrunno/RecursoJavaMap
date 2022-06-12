@@ -34,11 +34,13 @@ Map<String, Integer> map = new HashMap<>();
 ~~~
 
 Também foi utilizada um algoritmo para contagem de votos "obtido de uma urna de votos". Para isso a implementação conta com um trecho de código que ler um arquivo texto em formato .csv que está disponível no package aqui no gitHub e que pode ser salvo no disco local para ser executado, como mostra o código abaixo.
+
 ~~~java
 System.out.print("Digite o caminho do arquivo texto, Ex: C:\temp\nome do arquivo.txt: ");
 String path = input.nextLine();
 try (BufferedReader br = new BufferedReader(new FileReader(path))) {
 ~~~
+
 o código ultiliza o BufferedReader br para abrir o arquivo que foi guardado na variável de referência path, dentro do try catch caso ocorra uma exceção, exibindo a mensagem de erro.
 ### Exemplo do Map<K,V> aplicado
  Ex:. <Francisco Melo,35>, onde “Francisco Melo” que é o nome do candidato que faz referência a chave<Key> e, portanto, foi definido do tipo String e o valor<Value> “35” que é a quantidade de votos, do tipo Integer, como mostra a instância no início do código.
@@ -65,7 +67,7 @@ Vale ressaltar que o map não permitir repetições de dados. Portanto, quando �
 			}
 ~~~
 
-E finalizando, aqui foi criada um for para percorrer o map para cada chave que for imprimida na tela.
+E finalizando, aqui foi criada um for para percorrer o map para cada chave que for exibida na tela.
 
 ~~~java
 			for (String key : map.keySet()) {
